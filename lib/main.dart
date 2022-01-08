@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalogue/pages/home_page.dart';
 import 'package:flutter_catalogue/pages/login_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main(List<String> args) {
   runApp(MyApp());
@@ -11,17 +12,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int age = 18;
+  
 
     return MaterialApp(
       // home: HomePage(),
       themeMode: ThemeMode.light,
-      theme: ThemeData(primarySwatch: Colors.blue),
+      theme: ThemeData(
+          primarySwatch: Colors.blue,
+          fontFamily: GoogleFonts.lato().fontFamily,
+          ),
       darkTheme: ThemeData(brightness: Brightness.dark),
       routes: {
-        "/" : (context) => HomePage(),
-        "/login" : (context) => LoginPage(),
-
+        "/": (context) => LoginPage(),
+        "/login": (context) => LoginPage(),
       },
     );
   }
